@@ -1,0 +1,73 @@
+.registration {
+
+  padding: 96px 0px;
+
+  // .registration__container
+
+  &__container {}
+
+  &__box {
+    text-align: center;
+    background: linear-gradient(90deg, #9BD1F2 1.44%, #C4DDF2 100%),
+      radial-gradient(127.66% 330.89% at 0% 0%, rgba(53, 99, 128, 0.2) 0%, rgba(155, 209, 242, 0) 100%)
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+      ,
+      radial-gradient(53.4% 650.05% at 99.34% 0%, rgba(53, 99, 128, 0.2) 0%, rgba(155, 209, 242, 0) 100%)
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+    ;
+    padding: 48px;
+    border-radius: 24px;
+
+
+    @media (max-width: 992px) {
+      padding: 24px;
+
+    }
+  }
+
+  // .registration__title
+
+  &__title {
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 67px;
+    color: #fff;
+
+    margin: 0 auto;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 992px) {
+      font-size: 48px;
+      line-height: 53.76px;
+
+      text-align: center;
+    }
+
+    @media (max-width: 428px) {
+      max-width: 333px;
+    }
+  }
+
+  // .registration__button
+
+  &__button {
+
+    display: inline-block;
+    padding: 12px 24px;
+    text-align: center;
+    border: 1px solid #356380;
+    color: currentColor;
+    font-weight: 500;
+    border-radius: 24px;
+    transition: all .66s ease;
+
+    &:hover {
+      transition: all .66s ease;
+      background-color: #356380;
+      color: #fff;
+    }
+  }
+}

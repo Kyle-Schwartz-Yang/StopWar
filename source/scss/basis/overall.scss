@@ -1,0 +1,192 @@
+//!01010101010101011010010101010100101010101010100101010101010010101010101010100101
+// page settings
+body {
+  background-color: var(--bg-main-color);
+  font-size: $fsize-default;
+  font-family: $font-default;
+  font-weight: 400;
+  // line-height: 24px;
+  color: var(--text-primary);
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.page {
+  flex: 1 0 auto;
+}
+
+[class*="__container"] {
+  max-width: 1315px;
+  margin: 0 auto;
+  padding: 0px 10px;
+}
+
+//$ --------------------------------------------------</>
+
+//!01010101010101011010010101010100101010101010100101010101010010101010101010100101
+
+
+//!01010101010101011010010101010100101010101010100101010101010010101010101010100101
+// re -use:
+
+//$ ------------------------PRELOADER :
+.preloader {
+  width: 30px;
+  height: 30px;
+  border: 10px dashed #C4DDF2;
+  border-radius: 50%;
+  animation: preloader-infinity .5s infinite ease-in-out;
+}
+
+@keyframes preloader-infinity {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+//$ --------------------------------------------------</>
+
+//$ BUTTON(LINK) SIGNUP, JOIN :
+.btn-signup {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  padding: 11.5px 5px;
+  color: var(--text-ming);
+  border: 1px solid currentColor;
+  font-weight: 500;
+  border-radius: 48px;
+  margin-bottom: 24px;
+  // display: none;
+}
+
+//$ --------------------------------------------------</>
+
+
+//$ Switch Language
+.language {
+  min-width: 48px;
+  min-height: 48px;
+  border: 1px solid #C4DDF2;
+  border-radius: 35px;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+
+  // .language__select
+  &__select {
+    border: none;
+    background: none;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    font-weight: 500;
+
+    text-align: center;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    color: #fff;
+
+    line-height: 25px;
+
+    cursor: pointer;
+  }
+
+  // .language__option
+  &__option {}
+}
+
+//$ --------------------------------------------------</>
+
+//!----------------------------------------СОЦ.СЕТИ
+
+.social {
+  @include flexbox(center, center, null, null);
+
+  &__icon {
+    @include flexbox(center, center, null, null);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+    border: 1px solid #C4DDF2;
+
+    & svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+//!----------------------------------------СОЦ.СЕТИ
+
+
+
+
+//!01010101010101011010010101010100101010101010100101010101010010101010101010100101
+
+
+
+
+
+
+
+//!01010101010101011010010101010100101010101010100101010101010010101010101010100101
+
+//$ Placeholder Selectors (%)======================================================
+//#-------------------------
+//*Описание: Скрыть элемент
+//#-------------------------
+//@extend %visuallyHidden;
+%visuallyHidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  margin: -1px;
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+  white-space: nowrap;
+  visibility: hidden;
+  //hidden element
+}
+
+//#-------------------------
+//*Описание: Обнуление стилей у кнопки
+//#-------------------------
+//@extend %resetButton;
+//?all: unset сбивает все настройки: box-sizing, width, height, display, font-size, background,border...
+%resetButton {
+  all: unset;
+  //Устанавливает свойства заново:
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  background: none;
+  border: none;
+  //------------------
+  cursor: pointer;
+  display: inline-block; // Добавьте inline-block для сохранения ширины и высоты
+  width: auto; //Установите ширину/высоту в 'auto' для предотвращения конфликтов с 'width: 100%/height: 100%'
+  height: auto;
+  box-sizing: border-box; //Рекомендуется для корректной работы размеров элемента
+  line-height: normal; //Установите line-height в 'normal', если это необходимо
+  //------------------
+}
+
+//!01010101010101011010010101010100101010101010100101010101010010101010101010100101

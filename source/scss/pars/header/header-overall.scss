@@ -1,0 +1,37 @@
+.burger {
+  @include burgerDefault(open, #356380);
+  width: 18px;
+  height: 12px;
+  z-index: 1000;
+}
+
+
+
+
+//!----------------------------------------ТАЙМЕР: 
+
+.countdown {
+  font-size: 18px;
+
+  // .countdown__title
+  &__title {}
+
+  // .countdown__box
+  &__box {
+    @include flexbox(null, center, null, 12px);
+  }
+
+  // .countdown__time
+  &__time {
+    @include flexbox(null, center, null, 12px);
+    padding: 6px;
+    border: 1px solid var(--bg-primary-color);
+    border-radius: 35px;
+    visibility: hidden;
+  }
+
+  // .countdown__preloader
+  &__preloader {}
+}
+
+//!----------------------------------------ТАЙМЕР: 

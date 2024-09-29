@@ -1,0 +1,32 @@
+//*FLEX-BOX GRID-LOYOUT====================================================(END)
+
+//-------------------------
+//>Описание: GRID LOYOUT. 
+//-------------------------
+//@include grid(2, 1fr, (50px 20px));
+@mixin grid($columns: 2, $resize-column: 1fr, $gap: (30px)) {
+  display: grid;
+  grid-template-columns: repeat($columns, $resize-column);
+  gap: $gap; //row-gap + column-gap
+}
+
+//-------------------------
+//>Описание: FLEXBOX. 
+//-------------------------
+//@include flexbox(space-between, center, column, 50px);
+@mixin flexbox($justify, $align, $direction: null, $gap: null) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+
+  @if $direction {
+    flex-direction: $direction;
+  }
+
+  @if $gap {
+    gap: $gap;
+  }
+
+}
+
+//*FLEX-BOX GRID-LOYOUT====================================================(END)

@@ -1,0 +1,252 @@
+.footer {
+  padding: 30px 0px;
+  color: var(--text-ming);
+  box-shadow: 0px 0px 0px 0px #0000000D,
+    0px -3px 6px 0px #0000000D,
+    0px -11px 11px 0px #0000000A,
+    0px -25px 15px 0px #00000008,
+    0px -45px 18px 0px #00000003,
+    0px -70px 20px 0px #00000000;
+
+
+
+  // .footer__container
+  &__container {}
+
+  // .footer__content
+
+  &__content {
+    @include flexbox(space-between, center, null, null);
+    margin: 0px 0px 16px 0px;
+
+    @media (max-width: 1250px) {
+      @include flexbox(space-between, center, null, 24px);
+    }
+
+    @media (max-width: 768px) {
+
+      flex-direction: column;
+    }
+  }
+
+  // .footer__logo
+
+  &__logo {
+
+    @include flexbox(center, center, null, null);
+
+
+    margin: 0px 0px 16px 0px;
+    max-width: 315px;
+
+    // flex-basis: 316px;
+    @media (max-width: 1250px) {
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 428px) {
+      flex-wrap: nowrap;
+      margin: 0px;
+    }
+  }
+
+  // .footer__logo-image
+  &__logo-image {
+    width: 120px;
+    height: 120px;
+    margin: 0px 7px 0px 0px;
+
+    & img {
+      min-width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (max-width: 428px) {
+      min-width: 86px;
+      height: 86px;
+
+    }
+  }
+
+  // .footer__logo-text
+  &__logo-text {
+    @media (max-width: 1250px) {
+      text-align: center;
+    }
+
+    width: 100%;
+    line-height: 25px;
+    font-weight: 400;
+
+    @media (max-width: 428px) {
+      color: #000;
+      text-align: left;
+    }
+  }
+
+  // .footer__body
+  &__body {
+    flex: 1 1 auto;
+  }
+
+  // .footer__row
+  &__row {
+    @include flexbox(space-between, null, null, null);
+
+    &:not(:last-child) {
+      margin: 0px 0px 24px 0px;
+    }
+
+    @media (max-width: 1250px) {
+      @include flexbox(center, null, null, 24px);
+      flex-wrap: wrap;
+    }
+  }
+
+
+  &__disclaimer {
+    display: none;
+
+    @media (max-width: 428px) {
+      display: block;
+      text-align: center;
+      font-size: 14px;
+      line-height: 19.6px;
+      font-weight: 400;
+      max-width: 362px;
+    }
+  }
+
+  // .footer__input
+  &__input {
+    min-width: 306px;
+
+    border-radius: 30px;
+    padding: 9px 24px;
+
+
+
+    &::placeholder {
+      color: var(--text-ming);
+      font-weight: 400;
+    }
+
+    @media (max-width: 1250px) {
+      padding: 15px 24px;
+      width: 100% !important;
+    }
+
+    @media (max-width: 428px) {
+      padding: 9px 24px;
+      background-color: var(--bg-primary-color);
+    }
+
+  }
+
+
+  // .footer__button
+
+  &__button {
+    color: var(--text-ming);
+    border: 1px solid currentColor;
+
+    font-size: 17px;
+    font-weight: 500px;
+    display: inline-block;
+    line-height: 1;
+    border-radius: 45px;
+
+
+
+
+    &:hover {
+      transition: all .66s ease;
+      background-color: #356380;
+      color: #fff;
+    }
+
+
+
+    &--small {
+      @extend %resetButton;
+      display: inline-block;
+
+      text-align: center;
+      padding: 12px 24px;
+
+    }
+
+    &--big {
+      @extend %resetButton;
+      display: inline-block;
+      text-align: center;
+      padding: 11.5px 31.5px;
+    }
+
+
+    @media (max-width: 1250px) {
+      padding: 15px 24px;
+      min-width: 100%;
+    }
+
+    @media (max-width: 428px) {
+
+      padding: 11.5px 31.5px;
+    }
+
+  }
+
+
+
+
+
+  // .footer__social
+  &__social {
+
+    @include flexbox(center, center, null, 24px);
+
+    @media (min-width: 1250px) {
+      @include flexbox(center, center, null, 8px);
+
+      & .social__icon {
+        border: none;
+        width: 24px;
+        height: 24px;
+        // border: 1px solid red;
+        padding: 0;
+        margin-right: 8px;
+      }
+    }
+
+  }
+
+
+
+  // .footer__copyright
+  &__copyright {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    line-height: 19.6px;
+
+    @media (max-width: 428px) {
+      display: none;
+    }
+  }
+}
+
+
+
+
+
+
+// .social {
+
+//   // .social__icon
+
+//   &__icon {}
+// }
+
+// .svg-teleg {}

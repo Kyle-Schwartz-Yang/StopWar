@@ -1,0 +1,6 @@
+document.txt
+destination/
+node_modules/
+version.json
+**/*.zip
+**/*.rar

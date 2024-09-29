@@ -1,0 +1,41 @@
+//-------------------------
+//>Описание: Подключения background. 
+//-------------------------
+//  @include background('@img/13.jpg', #522525, no-repeat, null, center, cover);
+@mixin background($image, $color: null, $repeat: null, $attachment: null, $position: null, $size: null, ) {
+  background-image: url(#{$image});
+
+  @if $color !=null {
+    background-color: $color;
+  }
+
+  @if $repeat !=null {
+    background-repeat: $repeat;
+  }
+
+  @if $size !=null {
+    background-size: $size;
+  }
+
+  @if $position !=null {
+    background-position: $position;
+  }
+
+
+  @if $position !=null {
+    background-attachment: $attachment;
+  }
+
+}
+
+// ! 0101010110101001010010101010010101010010101001010101010010101010010101010010101
+
+//-------------------------
+//>Описание: Подключение формата WEPB. Используя @supports {}
+//-------------------------
+//@include background-image-webp('/img/image.webp');
+@mixin background-image-webp($image-path) {
+  @supports (background-image: url(#{$image-path})) {
+    background-image: url(#{$image-path});
+  }
+}

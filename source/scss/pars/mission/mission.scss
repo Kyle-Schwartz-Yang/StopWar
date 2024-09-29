@@ -1,0 +1,133 @@
+.mission {
+
+  // .mission__container
+
+  &__container {}
+
+  // .mission__info
+
+  &__info {
+
+    @include flexbox(center, center, column, null);
+    background: linear-gradient(to right, rgba(155, 209, 242, 1), rgba(196, 221, 242, 1));
+    padding: 38px 110px 96px;
+    border-radius: 48px;
+
+    &:not(:last-child) {
+      margin: 0px 0px 48px 0px;
+    }
+
+
+    @media (max-width: 992px) {
+      padding: 38px 24px 24px;
+    }
+
+  }
+
+  // .mission__title
+
+  &__title {
+    font-size: 60px;
+    line-height: 67.2px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+
+    &:not(:last-child) {
+      margin: 0px 0px 24px 0px;
+    }
+
+    @media (max-width: 428px) {
+      font-size: 48px;
+    }
+  }
+
+  // .mission__list
+
+  &__list {}
+
+  // .mission__item
+
+  &__item {
+
+    padding: 24px;
+    padding-left: 48px;
+    border: 1px solid rgba(196, 221, 242, 1);
+    border-radius: 24px;
+    line-height: 25.2px;
+    color: rgba(0, 0, 0, 1);
+
+    &:not(:last-child) {
+      margin: 0px 0px 24px 0px;
+    }
+
+
+    &>p {
+      position: relative;
+      // border: 1px solid red;
+    }
+
+    &>p::before {
+      content: '!';
+      display: inline-block;
+      position: absolute;
+      left: -28px;
+      font-size: 60px;
+      font-weight: 500;
+      color: #ecf6f7;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+
+
+    @media (max-width: 1250px) {
+
+      // padding: 24px;
+      &>p>br {
+        display: none;
+      }
+    }
+
+
+    @media (max-width: 428px) {
+
+      // padding: 24px;
+      &>p {
+        font-size: 16px;
+        // ! Так будет лучше.
+      }
+    }
+
+
+  }
+
+  // .mission__footer
+
+  &__footer {
+    max-width: 636px;
+  }
+
+  // .mission__message
+
+  &__message {
+    line-height: 28.8px;
+
+    &:not(:last-child) {
+      margin: 0px 0px 24px 0px;
+    }
+
+    @media (max-width: 428px) {
+      &:not(:last-child) {
+        margin: 0px 0px 12px 0px;
+      }
+    }
+  }
+
+  // .mission__txt
+
+  &__txt {
+    color: var(--text-primary-light);
+    line-height: 25.2px;
+  }
+}

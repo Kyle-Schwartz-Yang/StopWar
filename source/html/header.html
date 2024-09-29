@@ -1,0 +1,104 @@
+<header class="header">
+  <div class="header__container">
+
+    <div class="header__logo">
+      <img src="@img/logo.png" alt="logo">
+    </div>
+
+    <div class="header__menu">
+
+      <button type="button" aria-label="Open menu" class="header__burger burger">
+        <span></span>
+      </button>
+
+      <nav class="header__body">
+        <ul class="header__list">
+          <li class="header__item"><a href="/">Про нас</a></li>
+          <li class="header__item"><a href="/">Програма</a></li>
+          <li class="header__item"><a href="/">Спікери</a></li>
+          <li class="header__item"><a href="/">Реєстрація</a></li>
+        </ul>
+
+        <div class="header__social social social-mobile">
+          <!-- Иконки социальных сетей -->
+          <a href="#" class="social__icon">
+            <svg class="svg-teleg">
+              <use xlink:href="@img/icons/sprite.svg#telegram-i"></use>
+            </svg>
+            <!-- <img src="@img/icons/sprite.svg#telegram-i" alt="tw"> -->
+          </a>
+          <a href="#" class="social__icon">
+            <svg>
+              <use xlink:href="@img/icons/sprite.svg#vaiber_i"></use>
+            </svg>
+            <!-- <img src=" @img/icons/sprite.svg#vaiber_i" alt="tg" class="svg-telegram-i-dims"> -->
+          </a>
+        </div>
+
+
+        <div class="header__language language language-mobile">
+          <!-- Перекючатель -->
+          <select class="language__select">
+            <option value="UA" selected class="language__option">UA</option>
+            <option value="USA" class="language__option">ENG</option>
+          </select>
+        </div>
+
+      </nav>
+
+
+      <div class="header__countdown countdown">
+        <!-- Таймер -->
+        <h3 class="countdown__title">До початку:</h3>
+
+        <div class="countdown__box">
+
+          <div class="countdown__time">
+            <h4 id="days"></h4> <small>д.</small>
+          </div>
+          <div class="countdown__time">
+            <h4 id="hours"></h4> <small>г.</small>
+          </div>
+          <div class="countdown__time">
+            <h4 id="minutes"></h4><small>хв.</small>
+          </div>
+        </div>
+        <!-- Loading... -->
+        <div class="countdown__preloader preloader">
+        </div>
+
+      </div>
+
+      <div class="header__social social social-desktop">
+        <!-- Иконки социальных сетей -->
+        <a href="#" class="social__icon">
+          <svg class="svg-teleg">
+            <use xlink:href="@img/icons/sprite.svg#telegram-i"></use>
+          </svg>
+          <!-- <img src="@img/icons/sprite.svg#telegram-i" alt="tw"> -->
+        </a>
+        <a href="#" class="social__icon">
+          <svg>
+            <use xlink:href="@img/icons/sprite.svg#vaiber_i"></use>
+          </svg>
+          <!-- <img src=" @img/icons/sprite.svg#vaiber_i" alt="tg" class="svg-telegram-i-dims"> -->
+        </a>
+      </div>
+
+      <div class="header__language language language-desktop">
+        <!-- Перекючатель -->
+        <select class="language__select">
+          <option value="UA" selected class="language__option">UA</option>
+          <option value="USA" class="language__option">ENG</option>
+        </select>
+      </div>
+
+    </div>
+
+
+    <a href="#" class="header__signup btn-signup">
+      Реєстрація
+    </a>
+
+  </div>
+</header>

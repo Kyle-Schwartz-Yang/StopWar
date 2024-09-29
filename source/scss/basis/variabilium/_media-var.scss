@@ -1,0 +1,25 @@
+//# ===========================
+//> Медиа запрос (media query)
+//# ===========================
+//-----------------
+//*====================================================================
+//===============
+//$MEDIA
+//? @media(max-width: $medium) {...}
+//===============
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$extra_large: 1260px;
+$extra_extra_large: 1410px;
+
+//===============
+//$MEDIA MOBILEFIRST
+//? @media(min-width: $mobile_medium) {...}
+//===============
+$mobile_small: 575px;
+$mobile_medium: 767px;
+$mobile_large: 991px;
+$mobile_extra_large: 1219px;
+$mobile_extra_extra_large: 1409px;
+//*====================================================================
