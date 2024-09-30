@@ -5,30 +5,32 @@ import { Pagination, Keyboard, EffectCards, Autoplay, Navigation } from 'swiper/
 
 export function initialSwiperSpeaker(selector) {
   return new Swiper(selector, {
-    // Optional parameters
-
     modules: [Navigation, Keyboard, Pagination, EffectCards, Autoplay],
     direction: 'horizontal',
     loop: true,
     autoHeight: false,
     grabCursor: true,
     slidesPerView: 1,
-    spaceBetween: 24,
+    spaceBetween: 0,
     speed: 700,
     // autoplay: { delay: 5000 },
-
     keyboard: { enabled: true },
-
     navigation: {
       nextEl: ".speaker__button-next",
       prevEl: ".speaker__button-prev",
+    },
 
-      // nextEl: ".swiper-button-next",
-      // prevEl: ".swiper-button-prev",
+    // Используем брейкпоинты Swiper
+    breakpoints: {
+      // Когда ширина экрана >= 768px
+      992: {
+        // Отключаем Swiper
+        enabled: false,
+      },
+
     },
   });
 }
-
 
 
 export function initialSwiperSponsors(selector) {
