@@ -30,11 +30,32 @@
 
   &__wrapper {
     display: flex;
+    justify-content: space-between;
+    width: 100%;
 
-
-    // flex-wrap: wrap;
-    // margin: 0px -12px;
   }
+
+
+
+  // .speaker__column
+  &__slide {
+    // border: 1px solid red;
+    // padding: 0px 12px;
+    display: flex;
+    flex: 0 1 calc(25% - 30px);
+    height: auto !important;
+
+    // @media (max-width: 992px) {
+    //   flex: 0 1 calc(50% - 30px);
+    // }
+
+
+    &:not(:last-child) {
+      margin-right: 30px;
+      /* Отступы между элементами */
+    }
+  }
+
 
   &__button-next,
   &__button-prev {
@@ -67,7 +88,6 @@
     }
   }
 
-
   &__button-next {
 
     left: 12px;
@@ -81,20 +101,8 @@
   }
 
 
-  // .speaker__column
-  &__slide {
-    // padding: 0px 12px;
-    // display: flex;
-    // flex: 0 1 20%;
-
-    // 
-    display: flex;
-    flex: 0 1 auto;
-    height: auto !important;
-  }
 
   // .speaker__item
-
   &__item {
 
     @include flexbox(null, null, column, null);
