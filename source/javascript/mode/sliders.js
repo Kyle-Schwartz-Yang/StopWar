@@ -10,7 +10,7 @@ export function initialSwiperSpeaker(selector) {
     loop: true,
     autoHeight: false,
     grabCursor: true,
-    slidesPerView: 1,
+    slidesPerView: 2,
     spaceBetween: 0,
     speed: 700,
     // autoplay: { delay: 5000 },
