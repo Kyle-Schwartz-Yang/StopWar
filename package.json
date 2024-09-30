@@ -11,7 +11,7 @@
     "ftp": "gulp fileTransfer --production",
     "sprite": "gulp sprite"
   },
-  "author": "LASAGNA",
+  "author": "Schwartz",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.23.5",
