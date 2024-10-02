@@ -4,7 +4,7 @@ node_modules/
 version.json
 **/*.zip
 **/*.rar
-
+TARGET.md
 source/files/*
 !source/files/filespush/
 
