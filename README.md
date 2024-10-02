@@ -22,7 +22,7 @@ gulp/webpack, html, js, scss, swiper
 # Собрать проекте в ZIP (Share) 
   gulp createZIP
 
-# cобрать svg ( Необходимость )
+# Cобрать svg ( Необходимость )
   gulp sprite
 
 # Отправить на сервер (необходимость в доп. настройки)
