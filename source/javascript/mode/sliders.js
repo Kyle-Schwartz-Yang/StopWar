@@ -10,7 +10,7 @@ export function initialSwiperSpeaker(selector) {
     loop: true,
     autoHeight: false,
     grabCursor: true,
-    slidesPerView: 2,
+    slidesPerView: 1,
     spaceBetween: 0,
     speed: 700,
     // autoplay: { delay: 5000 },
@@ -22,7 +22,7 @@ export function initialSwiperSpeaker(selector) {
 
     // Используем брейкпоинты Swiper
     breakpoints: {
-      // Когда ширина экрана >= 768px
+      // Когда ширина экрана >= 992px
       992: {
         // Отключаем Swiper
         enabled: false,

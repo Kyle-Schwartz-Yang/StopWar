@@ -17,6 +17,11 @@
     &:not(:last-child) {
       margin: 0px 0px 24px 0px;
     }
+
+
+    @media (max-width: 576px) {
+      text-align: center;
+    }
   }
 
   // .speaker__box
@@ -45,15 +50,36 @@
     flex: 0 1 calc(25% - 30px);
     height: auto !important;
 
-    // @media (max-width: 992px) {
-    //   flex: 0 1 calc(50% - 30px);
-    // }
-
-
     &:not(:last-child) {
       margin-right: 30px;
       /* Отступы между элементами */
     }
+
+    @media (max-width: 992px) {
+      flex: 0 1 calc(50% - 30px);
+    }
+
+
+    @media (max-width: 992px) {
+      flex: 0 1 calc(50% - 20px);
+
+      &:not(:last-child) {
+        margin-right: 20px;
+        /* Отступы между элементами */
+      }
+    }
+
+
+    @media (max-width: 576px) {
+      flex: 0 1 calc(100% - 5px);
+
+      &:not(:last-child) {
+        margin-right: 5px;
+        /* Отступы между элементами */
+      }
+    }
+
+
   }
 
 
@@ -79,24 +105,25 @@
   }
 
   &__button-prev {
+    left: 12px;
+    top: 25%;
+
+    &::after {
+      content: '';
+
+      clip-path: polygon(0 41%, 57% 38%, 60% 0%, 100% 50%, 60% 100%, 57% 64%, 1% 66%);
+      transform: rotate(180deg);
+    }
+  }
+
+  &__button-next {
+
     right: 12px;
     top: 25%;
 
     &::after {
       content: '';
       clip-path: polygon(0 41%, 57% 38%, 60% 0%, 100% 50%, 60% 100%, 57% 64%, 1% 66%);
-    }
-  }
-
-  &__button-next {
-
-    left: 12px;
-    top: 25%;
-
-    &::after {
-      content: '';
-      clip-path: polygon(0 41%, 57% 38%, 60% 0%, 100% 50%, 60% 100%, 57% 64%, 1% 66%);
-      transform: rotate(180deg);
     }
   }
 
@@ -119,8 +146,8 @@
   // .speaker__img
 
   &__img {
-    border-top-left-radius: 24px;
-    border-top-right-radius: 24px;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
     overflow: hidden;
 
     width: 100%;
