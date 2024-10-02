@@ -5,7 +5,7 @@
 
 ### Технологии :
 ```bash
-gulp, html, js, scss,
+gulp/webpack, html, js, scss,
 ```
 ## 🛠️ Установка 🆘
 ```bash
